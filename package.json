@@ -1,0 +1,25 @@
+{
+  "name": "bullmq-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickKrsk/bullmq-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickKrsk/bullmq-example/issues"
+  },
+  "homepage": "https://github.com/NickKrsk/bullmq-example#readme",
+  "dependencies": {
+    "bullmq": "^1.54.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
