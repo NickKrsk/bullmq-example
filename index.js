@@ -27,10 +27,9 @@ worker1.on('failed', (job, err) => {
     console.log(`worker1, ${job.id} has failed with ${err.message}`);
 });
 
-const addJobs = async () => {
+const addJob = async () => {
     console.log('add jobs');
     await myQueue.add('myJobName', { foo: 'bar', date: new Date() });
-    // await myQueue.add('myJobName', { qux: 'baz' });    
 }
 
 app.get('/', (req, res) => {
@@ -39,7 +38,10 @@ app.get('/', (req, res) => {
 
 app.get('/addQueue', (req, res) => {
     res.send('addQueue');
-    addJobs();
+    addJob();
+    setTimeout(() => {
+        addJob();
+    }, 2000);
   })
 
 app.listen(3000, () => {
